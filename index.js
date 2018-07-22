@@ -18,7 +18,7 @@ function addToCart(item) {
   obj.itemName=item
   obj.itemPrice=price
   cart.push(obj)
-  return `${item} has been added to your cart.`
+  return `${obj.itemName} has been added to your cart.`
 }
 
 function viewCart() {
