@@ -80,7 +80,7 @@ function placeOrder(cardNumber) {
   else{
     str= `Your total cost is ${total()}, which will \
     be charged to the card ${cardNumber}.`
-    cart= new Array)_
+    cart= new Array()
     return str
   }
 }
