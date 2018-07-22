@@ -61,11 +61,12 @@ function removeFromCart(item) {
     val=cart[i].itemName
     if(item==val){
       cart.splice(i, 1, cart[i+1])
+      cart.length=cart.length-1
       deleted = true
       }
     }
     if (deleted===true){
-      return cart.length
+      return cart
     }
     else{
       return "That item is not in your cart."
