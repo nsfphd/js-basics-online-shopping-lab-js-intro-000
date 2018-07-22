@@ -63,7 +63,7 @@ function removeFromCart(item) {
     if(item==val){
       delete cart[i]
       deleted = true
-    }
+      }
     }
     if (deleted===true){
       return cart
@@ -71,7 +71,6 @@ function removeFromCart(item) {
     else{
       return "That item is not in your cart."
     }
-  }
 }
 
 function placeOrder(cardNumber) {
