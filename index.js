@@ -18,7 +18,7 @@ function addToCart(item) {
   var obj=new Object()
   obj.itemName=item
   obj.itemPrice=price
-  cart[len]= new obj
+  cart.push(obj)
   return `${item} has been added to your cart.`
 }
 
