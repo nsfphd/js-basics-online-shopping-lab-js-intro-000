@@ -67,7 +67,7 @@ function removeFromCart(item) {
       conf="Item not found"
     }
   }
-    return val
+    return conf
 }
 
 function placeOrder(cardNumber) {
