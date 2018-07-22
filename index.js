@@ -14,7 +14,6 @@ function setCart(c) {
 
 function addToCart(item) {
   var price=getRandomInt(100)+1
-  var len=cart.length
   var obj=new Object()
   obj.itemName=item
   obj.itemPrice=price
