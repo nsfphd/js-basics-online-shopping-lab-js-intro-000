@@ -65,7 +65,7 @@ function removeFromCart(item) {
       }
     }
     if (deleted===true){
-      return cart
+      return val
     }
     else{
       return "That item is not in your cart."
