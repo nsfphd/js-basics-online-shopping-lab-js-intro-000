@@ -57,17 +57,17 @@ function total() {
 
 function removeFromCart(item) {
   var val = ""
-  var conf = ""
+  //var conf = ""
   for(var i=0; i<cart.length; i++){
     val=cart[i].itemName
     if(item==val){
-      conf= "Item found"
+      cart.splice(cart[i], 1, cart[i+1])
+      return cart
     }
     else{
-      conf="Item not found"
+      return "That item is not in your cart"
     }
   }
-    return conf
 }
 
 function placeOrder(cardNumber) {
