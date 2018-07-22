@@ -57,12 +57,14 @@ function total() {
 
 function removeFromCart(item) {
   var val = ""
+  var conf = ""
   for(var i=0; i<cart.length; i++){
-    if(str==cart[i].itemName){
-      val= "Item found"
+    val=cart[i].itemName
+    if(item==val){
+      conf= "Item found"
     }
     else{
-      val="Item not found"
+      conf="Item not found"
     }
   }
     return val
