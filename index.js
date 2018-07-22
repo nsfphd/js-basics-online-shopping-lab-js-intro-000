@@ -57,11 +57,15 @@ function total() {
 
 function removeFromCart(item) {
   var val = ""
-  //var conf = ""
+  var deleted = false
   for(var i=0; i<cart.length; i++){
     val=cart[i].itemName
     if(item==val){
       delete cart[i]
+      deleted = true
+    }
+    }
+    if (deleted===true){
       return cart
     }
     else{
