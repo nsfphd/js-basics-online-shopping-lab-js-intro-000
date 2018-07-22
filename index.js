@@ -56,7 +56,16 @@ function total() {
 }
 
 function removeFromCart(item) {
-
+  var val = ""
+  for(val i=0; i<cart.length; i++){
+    if(str==cart[i].itemName){
+      val= "Item found"
+    }
+    else{
+      val="Item not found"
+    }
+  }
+    return val
 }
 
 function placeOrder(cardNumber) {
