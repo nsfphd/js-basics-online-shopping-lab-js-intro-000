@@ -1,4 +1,7 @@
 var cart = [];
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
 
 function getCart() {
  return cart;
@@ -10,19 +13,50 @@ function setCart(c) {
 }
 
 function addToCart(item) {
- // write your code here
+  var price=getRandomInt(100)+1
+  var len=cart.length
+  var obj=new Object()
+  obj.itemName=item
+  obj.itemPrice=price
+  cart[len]=obj
+  return `${item} has been added to your cart.`
 }
 
 function viewCart() {
-  // write your code here
+  if(cart.length===0){
+    return "Your shopping cart is empty."
+  }
+  else if( cart.length===1){
+    var str=`${cart[0].itemName} at \$${cart[0].itemPrice}.`
+    return `In your cart, you have ${str}`
+  }
+  else{
+    var newArr= new Array()
+    var str = ""
+    for (var i = 0; i<cart.length; i++){
+      if(i===cart.length-1){
+        str=`and ${cart[i].itemName} at \$${cart[i].itemPrice}.`
+    }
+    else{
+      str=` ${cart[i].itemName} at \$${cart[i].itemPrice}`
+    }
+    newArr[i]=str
+    }
+    return "In your cart, you have" +newArr
+  }
+
 }
 
 function total() {
-  // write your code here
+  var i = 0
+  for (var l=0; l<cart.length; l++){
+    i=i+cart[l].itemPrice
+  }
+  return i
 }
 
 function removeFromCart(item) {
-  // write your code here
+
 }
 
 function placeOrder(cardNumber) {
