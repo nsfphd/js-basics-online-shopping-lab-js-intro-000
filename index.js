@@ -35,7 +35,7 @@ function viewCart() {
     var str = ""
     for (var i = 0; i<cart.length; i++){
       if(i===cart.length-1){
-        str=`and ${cart[i].itemName} at \$${cart[i].itemPrice}.`
+        str=` and ${cart[i].itemName} at \$${cart[i].itemPrice}.`
     }
     else{
       str=` ${cart[i].itemName} at \$${cart[i].itemPrice}`
