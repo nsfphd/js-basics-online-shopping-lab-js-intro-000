@@ -22,16 +22,16 @@ function addToCart(item) {
 }
 
 function viewCart() {
+  var str=""
   if(cart.length===0){
     return "Your shopping cart is empty."
   }
   else if( cart.length===1){
-    var str=`${cart[0].itemName} at \$${cart[0].itemPrice}.`
+    str=`${cart[0].itemName} at \$${cart[0].itemPrice}.`
     return `In your cart, you have ${str}`
   }
   else{
     var newArr= new Array()
-    var str = ""
     for (var i = 0; i<cart.length; i++){
       if(i===cart.length-1){
         str=` and ${cart[i].itemName} at \$${cart[i].itemPrice}.`
